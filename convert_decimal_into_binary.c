@@ -1,12 +1,14 @@
-//Problem : wanted to covert given decimal number in to its binary form
-//converting a decimal number in to binary
+//Problem : wanted to convert given decimal number into its binary form
+//converting a decimal number into binary
 
 #include <stdio.h>
 #include <stdlib.h>
 
 void binary(int n);
-int sizeofthe_requiredArray(int n);
+int size_of_the_requiredArray(int n);
 
+
+// main function
 int main()
 {
     //getting a decimal input from the user
@@ -18,12 +20,11 @@ int main()
     return 0;
 }
 
+// function to convert decimal to binary
 void binary(int n){  //n =50
 
     //finding the size of the array == how many times the number divide by 2
-    int size = sizeofthe_requiredArray(n); //k = 6
-
-
+    int size = size_of_the_requiredArray(n); //k = 6
 
     int binaryArray[size];
 
@@ -36,14 +37,14 @@ void binary(int n){  //n =50
        i++;
    }
 
-
    for(int j=size; j>=0; j--){
       printf("%d",binaryArray[j]);
    }
 
 }
 
-int sizeofthe_requiredArray(int n){ // n=50
+// determine length size of binary number array
+int size_of_the_requiredArray(int n){ // n=50
 
     int k = 0;
     while(n!=0){
